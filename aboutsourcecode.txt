@@ -1,0 +1,104 @@
+1. Java.lang.Throwable :-
+The java.lang.Throwable class is the superclass of all errors and exceptions in the Java language. Only objects that are instances of this class (or one of its subclasses) are thrown by the Java Virtual Machine or can be thrown by the Java throw statement.
+	
+	Constructors:-
+		1.Throwable():-This constructs a new throwable with null as its detail message.
+		2.Throwable(String message):-This constructs a new throwable with the specified detail message.
+		3.Throwable(String message, Throwable cause):-This constructs a new throwable with the specified detail message and cause.
+		4.Throwable(Throwable cause):-This constructs a new throwable with the specified cause and a detail message of (cause==null ? 			null : cause.toString()) (which typically contains the class and detail message of cause).
+	
+	Methods:-
+		1.Throwable fillInStackTrace():-This method fills in the execution stack trace.
+		2.Throwable getCause():-This method returns the cause of this throwable or null if the cause is nonexistent or unknown.
+		3.String getLocalizedMessage():-This method creates a localized description of this throwable.
+		4.String getMessage():-This method returns the detail message string of this throwable.
+		5.StackTraceElement[] getStackTrace():-This method provides programmatic access to the stack trace information printed by 			printStackTrace().
+
+2.java.lang.Long :-
+The java.lang.Long class wraps a value of the primitive type long in an object. An object of type Long contains a single field whose type is long.
+	Fields:-
+	Following are the fields for java.lang.Long class:
+	a.static long MAX_VALUE :-this is a constant holding the maximum value a long can have, (2^63)-1.
+	b.static long MIN_VALUE :-This is a constant holding the minimum value a long can have, -2^63.
+	c.static int SIZE :-This is the number of bits used to represent a long value in two's complement binary form.
+	d.static Class<Long> TYPE :- This is the class instance representing the primitive type long.
+	
+	Constructors:-
+	1.Long(long value):-This constructs a newly allocated Long object that represents the specified long argument.
+	2.Long(String s)This constructs a newly allocated Long object that represents the long value indicated by the String parameter.
+	
+	Methods:-
+	1.static int bitCount(long i):-This method returns the number of one-bits in the two's complement binary representation of the 		specified long value.
+	2.int compareTo(Long anotherLong):-This method compares two Long objects numerically.
+	3.static Long decode(String nm):-This method decodes a String into a Long.
+
+3.java.net.Socket:-
+The java.net.Socket class represents the socket that both the client and server use to communicate with each other. The client obtains a Socket object by instantiating one, whereas the server obtains a Socket object from the return value of the accept() method.
+	Methods:-
+	1.public Socket(String host, int port):-throws UnknownHostException, IOException.This method attempts to connect to the specified 		server at the specified port. If this constructor does not throw an exception, the connection is successful and the client is 		connected to the server.
+	2.public Socket(InetAddress host, int port):-throws IOExceptionThis method is identical to the previous constructor, except that the 		host is denoted by an InetAddress object.
+	3.public Socket(String host, int port, InetAddress localAddress, int localPort):-throws IOException.Connects to the specified host and 		port, creating a socket on the local host at the specified address and port.
+	4.public Socket(InetAddress host, int port, InetAddress localAddress, int localPort):-throws IOException.This method is identical to 		the previous constructor, except that the host is denoted by an InetAddress object instead of a String.
+
+4.java.util.HashMap:-
+The java.util.HashMap class is the Hash table based implementation of the Map interface.Following are the important points about HashMap.
+1.This class makes no guarantees as to the iteration order of the map; in particular, it does not guarantee that the order will remain constant over time.
+2.This class permits null values and the null key.
+	
+	Constructor:-
+	1HashMap():-This constructs an empty HashMap with the default initial capacity (16) and the default load factor (0.75).
+	2HashMap(Collection<? extends E> c):-This constructs an empty HashMap with the specified initial capacity and the default load factor 		(0.75).
+	3.HashMap(int initialCapacity, float loadFactor):-This constructs an empty HashMap with the specified initial capacity and load factor.
+	4.HashMap(Map<? extends K,? extends V> m):-This constructs a new HashMap with the same mappings as the specified Map.
+	
+	Methods:-
+	1.boolean containsKey(Object key):-This method returns true if this map contains a mapping for the specified key.
+	2.boolean containsValue(Object value):-This method returns true if this map maps one or more keys to the specified value.
+	3.Set<Map.Entry<K,V>> entrySet():-This method returns a Set view of the mappings contained in this map.
+	6V get(Object key):-This method returns the value to which the specified key is mapped, or null if this map contains no mapping for 		the key.
+
+5.java.lang.String
+
+Main Internal Structures:
+
+	Constructors							
+  	1.String():-Intialises the String with empty character sequence
+	2.String(char[] array):-Stores a character sequence in a string 
+	3.String(char[] value, int offset, int count):-stores characters from a subarray of the character array argument into a String.
+	4.String(String original):-Initializes  String object so that it copies the Argument String
+	5.String(StringBuffer buffer):- Intialises string that contains the sequence of characters in the string buffer argument. 
+
+	Method									
+	1.char charAt(int index):-used to acces the character in a string
+ 	2.int compareTo(String str):-it use to compare two strings lexicographically.returns 0 if it is equal -1 if it is greater and 1 if it 		is less than this String in the object;
+ 	3.String concat(String str) :-Used for concatenation
+	4.static String copyValueOf(char[] data, int offset, int count)	:-Used to store the subs string in a chararray to a String
+
+6.java.util.ArrayList
+	Constructors								
+ 	1.ArrayList(initialCapacity):-Constructs an empty list with an initial capacity 
+ 	2.ArrayList():-Constructs an emptylist with no limit;
+ 
+        Method										
+ 	1.boolean add(E element):-Adds a specific element;
+ 	2.void add(int index,E value):-Adds an element at a index
+ 	3.boolean contains(Object o):-check whether it contains a particular element
+ 	4.E get(int index):-returns the value at that index
+	5.boolean remove(E e):-removes particular element
+ 	6.indexOf(Object o):-returns the index of the element
+ 	7.Iterator<E> iterator:-Returns an iterator over the elements in this list in proper sequence.
+ 	8.public boolean isEmpty():-Returns true if this list contains no elements
+ 	9.public int size():-Returns the size of the array
+ 
+
+
+
+
+
+
+
+
+
+
+
+
